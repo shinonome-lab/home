@@ -2,4 +2,4 @@
 !.gitignore
 !.vimrc
 !.slate
-!.emacs.d
+!.emacs.d/init.el
