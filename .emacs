@@ -9,7 +9,7 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (linum-mode)
-(set-default 'cursor-type 'hbar)
+(set-default 'cursor-type 'hbar) ; bar available
 ;; load org-mode file with indent
 (setq org-startup-indented t)
 
@@ -80,6 +80,13 @@
 
 ;; all backups goto ~/.backups instead in the current directory
 (setq backup-directory-alist (quote (("." . "~/.emacsbkups"))))
+
+;; 快速打开配置文件
+(defun open-init-file()
+  (interactive)
+  (find-file "~/.emacs"))
+;; 这一行代码，将函数 open-init-file 绑定到 <f2> 键上
+(global-set-key (kbd "<f2>") 'open-init-file)
 
 (package-initialize)
 
